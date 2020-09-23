@@ -53,7 +53,7 @@ class API
 	 */
 	public function __construct(array $data)
 	{
-		$this->subdomain = isset($data["subdomain"]) ? $data["subdomain"] : null;
+		$this->subdomain = isset($data["subdomain"]) ? $data["subdomain"] : null;;
 		$this->login = isset($data["login"]) ? $data["login"] : null;
 		$this->hash = isset($data["hash"]) ? $data["hash"] : null;
 		$this->access_token = isset($data["access_token"]) ? $data["access_token"] : null;
