@@ -1,0 +1,28 @@
+{
+    "name": "eugenegpil/amocrmapipublic",
+    "require": {
+        "php": "^7.0",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Podsvirov Semyon",
+            "email": "karasunokami@yahoo.com"
+        },
+        {
+            "name": "Efimov Evgeniy",
+            "email": "gpilligrim@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Amocrmapi\\": "src"
+        }
+    },
+    "description": "API sdk client form amocrm api"
+}
