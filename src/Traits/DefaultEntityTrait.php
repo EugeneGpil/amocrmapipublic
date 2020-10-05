@@ -73,6 +73,29 @@ trait DefaultEntityTrait
         return $this;
     }
 
+
+    /**
+     * Set custom field by enum
+     * 
+     * @param int $id
+     * @param int $enum
+     * 
+     * @return DefaultEntityTraint
+     */
+    public function setCustomFieldByEnum(int $id, int $enum)
+    {
+        $this->entity["custom_fields"][] = [
+            "id" => $id,
+            "values" => [
+                [
+                    "value" => $enum,
+                ],
+            ],
+        ];
+
+        return $this;
+    }
+
     /**
      * Add tag to entity
      *
