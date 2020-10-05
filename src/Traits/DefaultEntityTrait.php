@@ -73,7 +73,6 @@ trait DefaultEntityTrait
         return $this;
     }
 
-
     /**
      * Set custom field by enum
      * 
@@ -84,7 +83,7 @@ trait DefaultEntityTrait
      */
     public function setCustomFieldByEnum(int $id, int $enum)
     {
-        $this->entity["custom_fields"][] = [
+        $customFieldValue = [
             "id" => $id,
             "values" => [
                 [
@@ -92,6 +91,14 @@ trait DefaultEntityTrait
                 ],
             ],
         ];
+
+        $ind = array_search($id, array_column($this->entity["custom_fields"], "id"));
+
+        if ($ind !== false) {
+            $this->entity["custom_fields"][$ind] = $customFieldValue;
+        } else {
+            $this->entity["custom_fields"][] = $customFieldValue;
+        }
 
         return $this;
     }
