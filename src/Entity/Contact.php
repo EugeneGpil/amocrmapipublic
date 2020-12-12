@@ -106,6 +106,50 @@ class Contact implements EntityInterface
     }
 
     /**
+     * Get first name
+     * 
+     * @return string|null
+     */
+    public function getFirstName(): ?string
+    {
+        return $this->entity["first_name"] ?? null;
+    }
+
+    /**
+     * Get last name
+     * 
+     * @return string|null
+     */
+    public function getLastName(): ?string
+    {
+        return $this->entity["last_name"] ?? null;
+    }
+
+    /**
+     * Set first name
+     * 
+     * @param string $firstName
+     * @return Contact
+     */
+    public function setFirstName(string $firstName)
+    {
+        $this->entity["first_name"] = $firstName;
+        return $this;
+    }
+
+    /**
+     * Set last name
+     * 
+     * @param string $lastName
+     * @return Contact
+     */
+    public function setLastName(string $lastName)
+    {
+        $this->entity["last_name"] = $lastName;
+        return $this;
+    }
+
+    /**
      * Add phone to exist phone numbers
      *
      * @param array $customFields - all custom fields of contacts
