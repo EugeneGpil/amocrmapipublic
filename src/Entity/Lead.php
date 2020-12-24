@@ -240,17 +240,29 @@ class Lead implements EntityInterface
 		return $this;
 	}
 
-    /**
+     /**
      * Return entity pipeline
      * 
      * ["id" => int]
      * 
      * @return array
      */
-    public function getPipeline()
-    {
-        return $this->entity["pipeline"]["id"];
-    }
+     public function getPipeline()
+     {
+          return $this->entity["pipeline"]["id"];
+     }
+
+     /**
+     * Return entity pipeline
+     * 
+     * ["id" => int]
+     * 
+     * @return array
+     */
+     public function getPipelineId()
+     {
+          return $this->entity["pipeline"]["id"];
+     }
 
 	/**
      * Set entity pipeline
@@ -261,9 +273,23 @@ class Lead implements EntityInterface
      */
 	public function setPipeline($id)
 	{
-		$this->entity["pipeline"] = $id;
+		$this->entity["pipeline_id"] = $id;
 
         return $this;
+     }
+
+	/**
+     * Set entity pipeline
+     * 
+     * @param $id
+     * 
+     * @return Lead
+     */
+     public function setPipelineId($id)
+     {
+          $this->entity["pipeline_id"] = $id;
+
+          return $this;
      }
      
      /**
